@@ -1,0 +1,17 @@
+{
+  "name": "Zuu Crew Cloudera QuickStart",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "hostRequirements": { "cpus": 4, "memory": "16gb" },
+  "forwardPorts": [8888, 80],
+  "portsAttributes": {
+    "8888": { "label": "Hue" },
+    "80": { "label": "Tutorial" }
+  },
+  "customizations": {
+    "codespaces": { "openFiles": ["START-HERE.md"] }
+  },
+  "postCreateCommand": "bash .devcontainer/pull-image.sh"
+}
